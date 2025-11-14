@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/subLayout}"
+	layout:fragment="subbody">
+<body>
+
+	<!-- 서브페이지에는 .sub class 추가 -->
+	<div id="wrap" class="sub">
+
+		<!-- 기존 maxinner에서 l-maxinner 클래스 변경으로 인한 넓이 변화 -->
+		<div class="l-maxinner">
+			<div class="sub-tit">
+				<h2>AI 한국어학습</h2>
+			</div>
+
+			<div class="radius-box">
+				<!-- 좌측 문제 목록 -->
+				<div class="theme-list-box">
+					<ul id="questionTarget">
+						<!-- 클릭 시 active -->
+						<li tabindex="0" class="question_detach" data-ko-id="">
+							<div class="box">
+								<!-- 제출완료st01 미제출st02 -->
+								<span class="badges">제출완료</span>
+								<div class="tit">
+									<span class="order"></span>
+									<p class="sentence"></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 본문 -->
+				<div class="theme-detail-desc">
+					<!-- 제출완료st01 미제출st02 -->
+					<span class="badges" id="detail_badge"></span>
+					<span class="num" id="detail_order"></span>
+					<p>아래 문장을 잘 듣고 발음해 보세요! <br> 직접 녹음하여 발음 점수를 확인할 수 있습니다.</p>
+				</div>
+
+				<div class="theme-detail-tit">
+					<h3 id="detail_sentence"></h3>
+				</div>
+
+				<div class="theme-detail-content">
+					<div class="inner">
+						<ul class="speak-mic">
+							<li>
+								<div class="box">
+									<div class="arrow">
+										<p id="arrorTxt">마이크를 클릭하면 <br class="pc-br"> 녹음이 시작됩니다</p>
+									</div>
+									<div class="ico-btn">
+										<!-- active 클래스 추가 시 아이콘 변경 -->
+										<button type="button" id="mic" class="mic-ico" aira-label="녹음 전"></button>
+										<button type="button" id="recording" class="mic-ico active" aira-label="녹음 중" hidden></button>
+									</div>
+									<!-- active 클래스 추가 시 스타일 변경 -->
+									<a href="javascript:void(0)" id="stopRecord" class="btn disabled">녹음 완료</a>
+									<a href="javascript:void(0)" id="reRecord" class="btn active" style="display:none;">재녹음</a>
+								</div>
+							</li>
+						</ul>
+						<div class="btn-box">
+							<a href="javascript:void(0)" id="evaluate" class="btn btn-primary">제출하기</a>
+							<div id="tooltip" class="tooltip" hidden>
+								<p>녹음이 완료되어 <br class="pc-br"> 결과를 바로 확인할 수 있어요</p>
+							</div>
+						</div>
+					</div>
+					<div class="btn-wrap">
+						<a href="javascript:void(0)" id="previous" class="btn"> 지난 결과 확인하기<i></i></a>
+					</div>
+				</div>
+
+
+				<div class="news-pagination">
+					<ul class="paging">
+						<li class="prev">
+							<a href="javascript:void(0);" id="prev"><i></i>이전 단계</a>
+						</li>
+						<li class="next">
+							<!-- 비활성화시, disabled 클래스 추가 -->
+							<a href="javascript:void(0);" id="next" title="문제 이동">다음 단계 <i></i></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 공통 - alert -->
+	<div class="popup-wrap alert-popup">
+		<div class="popup">
+			<div class="pop-tit">
+				<p>알림</p>
+				<i class="close-btn"> <span class="hidden">닫기</span>
+				</i>
+			</div>
+			<div class="pop-cont">
+				<p id="alertText"></p>
+				<div class="content-btn btn-wrap">
+					<a href="#" class="btn btn-primary close-btn" title="">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 결과 확인 팝업 -->
+	<div class="popup-wrap checkResults-popup">
+		<div class="popup">
+			<div class="pop-tit">
+				<p>알림</p>
+				<i class="close-btn"> <span class="hidden">닫기</span>
+				</i>
+			</div>
+			<div class="pop-cont">
+				<p>결과를 확인하시겠습니까?</p>
+				<div class="content-btn btn-wrap">
+					<a id="evaluateConfirm" href="javascript:void(0)" class="btn btn-primary" title="">확인</a>
+					<a href="#" class="btn btn-secondary close-btn" title="">취소</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 로딩 영역 팝업 -->
+	<div class="popup-wrap loading-popup">
+		<div class="loading">
+			<div class="ico">
+				<i></i> <i></i>
+			</div>
+			<p>AI가 음성을 평가 중입니다.</p>
+		</div>
+	</div>
+
+	<!-- 녹음 재진행 팝업 -->
+	<div class="popup-wrap recording-popup">
+		<div class="popup">
+			<div class="pop-tit">
+				<p>알림</p>
+				<i class="close-btn"> <span class="hidden">닫기</span>
+				</i>
+			</div>
+			<div class="pop-cont">
+
+				<p>녹음을 다시 진행해 주세요.</p>
+
+				<div class="content-btn btn-wrap">
+					<a href="#" class="btn btn-primary close-btn" title="">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 학습 결과 팝업 -->
+	<!-- 기존 팝업과 다른 스타일로 인한 st02 클래스 추가 -->
+	<div class="popup-wrap st02 learning-popup">
+		<div class="popup">
+			<div class="pop-tit">
+				<p>
+					<span id="date">2025년 1월 17일</span> 점수는 <span id="totalScore" class="num">95</span> <b>점</b>
+				</p>
+				<i class="close-btn"> <span class="hidden">닫기</span>
+				</i>
+			</div>
+			<div class="pop-cont">
+
+				<div class="learning-box">
+					<ul id="resultTarget" data-file-seq="">
+						<!-- step01: step02 step03 으로 점수 구분 -->
+						<li class="result_detach">
+							<span class="learning_text">B국</span>
+							<div class="circle">
+								<p class="learning_score">30</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- between 클래스 추가 -->
+				<div class="content-btn btn-wrap between">
+					<div>
+						<a href="javascript:void(0)" id="replay" class="btn btn-secondary" title="">다시 듣기</a>
+						<a href="javascript:void(0)" id="retry" class="btn btn-tertiary close-btn" title="">다시 풀기</a>
+					</div>
+					<a href="javascript:void(0)" id="popNext" class="btn btn-primary" title="">다음 문제 바로가기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script th:src="@{/js/recordRTC.js}"></script>
+<script th:src="@{/js/sp/sp-ko-recorder.js}"></script>
+<script th:src="@{/js/sp/sp-ko.js}"></script>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <title>매일경제 AI경제 캠프</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<header id="header" class="sub"></header>
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<div id="wrap" class="sub">
+
+  <!-- 기존 maxinner에서 l-maxinner 클래스 변경으로 인한 넓이 변화 -->
+  <div class="l-maxinner">
+    
+    <div class="sub-tit">
+      <h2>AI 기사쓰기</h2>
+    </div>
+
+
+    <div class="anchor-btn">
+      <ul>
+        <li class="list active">
+          <a href="#" title="섹션 이동">
+            <div class="circle-line">
+              <p>1</p>
+            </div>
+            <p class="tit">
+              기본 정보 설정하기
+            </p>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#" title="섹션 이동">
+            <div class="circle-line">
+              <p>2</p>
+            </div>
+            <p class="tit">
+              기사 작성하기
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <form>
+
+
+      <!-- 하단 여백 추가로 인한 클래스 추가 -->
+      <div class="radius-box st02">
+
+        <div class="news-tit line">
+          <div class="tit">
+            <h3>기본 정보 설정하기</h3>
+          </div>
+        </div>
+  
+        <div class="form-flex">
+          <div class="form-box">
+            <div class="form-label">
+              <label>주제</label>
+            </div>
+            <div class="form-input">
+              <div class="select-input" tabindex="0">
+                <p>주제를 선택하세요.</p>
+                <i></i>
+              </div>
+              <div class="select-list">
+                <ul>
+                  <li tabindex="0">
+                    <p>제조</p>
+                  </li>
+                  <li tabindex="0">
+                    <p>서비스</p>
+                  </li>
+                  <li tabindex="0">
+                    <p>바이오</p>
+                  </li>
+                  <li tabindex="0">
+                    <p>IT</p>
+                  </li>
+                  <li tabindex="0">
+                    <p>해외</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <div class="form-label">
+              <label>소재</label>
+            </div>
+            <div class="form-input">
+              <div class="select-input" tabindex="0">
+                <p>소재를 선택하세요.</p>
+                <i></i>
+              </div>
+              <div class="select-list">
+                <ul>
+                  <li tabindex="0">
+                    <p>소프트웨어</p>
+                  </li>
+                  <li tabindex="0">
+                    <p>블록체인</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <p class="camp-radio-tit">
+              글 구성방식
+            </p>
+            <div class="camp-radio-list">
+              <ul>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0101" name="ainews01">
+                    <label for="ainews0101" tabindex="0">
+                      <span>역피라미드형</span>
+                      <span>
+                        <b>리드, 사실 열거, 추가 정보, 부가 정보</b>로 구성되는 글의 구조
+                      </span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn active">
+                    <input type="radio" id="ainews0102" name="ainews01" checked>
+                    <label for="ainews0102" tabindex="0">
+                      <span>다이아몬드형</span>
+                      <span>
+                        <b>도입, 중요 사실, 추가 정보</b>로 구성되는 글의 구조
+                      </span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0103" name="ainews01">
+                    <label for="ainews0103" tabindex="0">
+                      <span>혼합형</span>
+                      <span>
+                        <b>클라이막스 리드, 도입부, 주요 내용</b>으로 구성되는 글의 구조
+                      </span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0104" name="ainews01">
+                    <label for="ainews0104" tabindex="0">
+                      <span>피라미드형</span>
+                      <span>
+                        <b>도입, 중요한 사실, 추가 정보, 클라이막스</b>로 구성되는 글의 구조
+                      </span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-box">
+            <p class="camp-radio-tit">
+              기사 유형
+            </p>
+            <div class="camp-radio-list">
+              <ul>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0201" name="ainews02">
+                    <label for="ainews0201" tabindex="0">
+                      <span>스트레이트</span>
+                      <span>~ 기사유형</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn active">
+                    <input type="radio" id="ainews0202" name="ainews02" checked>
+                    <label for="ainews0202" tabindex="0">
+                      <span>단신</span>
+                      <span>~ 기사유형</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0203" name="ainews02">
+                    <label for="ainews0203" tabindex="0">
+                      <span>사설</span>
+                      <span>~ 기사유형</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="camp-radio-btn">
+                    <input type="radio" id="ainews0204" name="ainews02">
+                    <label for="ainews0204" tabindex="0">
+                      <span>칼럼</span>
+                      <span>~ 기사유형</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-wrap">
+          <a href="./ai_news02.html" class="btn btn-primary" title="페이지 이동">기사 작성하기</a>
+        </div>
+  
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+</div>
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<footer id="footer" class="sub"></footer>
+
+
+<script>
+
+  //공통 header & footer 를 관리하기 위한 페이지 분리 스크립트
+  document.addEventListener("DOMContentLoaded", function() {
+    $('#header').load("./header.html");
+    $('#footer').load("./footer.html");
+  });
+
+    // input checked 시 class 추가
+    document.addEventListener("DOMContentLoaded", function() {
+    $(".camp-radio-list input[type='radio']").on("change", function() {
+        const $this = $(this);
+        const $parentList = $this.closest(".camp-radio-list");
+
+        $parentList.find(".camp-radio-btn").removeClass("active");
+
+        $this.closest(".camp-radio-btn").addClass("active");
+    });
+  })
+
+</script>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+</html>

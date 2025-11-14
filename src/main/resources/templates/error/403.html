@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+			    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+			    layout:decorate="~{layout/subLayout}"
+			    layout:fragment="subbody">
+<script th:inline="javascript">
+	const message = /*[[#{common.http.403.msg}]]*/ '';
+	alert(message);
+	location.href = /*[[@{/}]]*/ '';
+</script>
+</html>

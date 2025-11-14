@@ -1,0 +1,1736 @@
+nohup: 입력 무시
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+12:31:40,343 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.12
+12:31:40,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Here is a list of configurators discovered as a service, by rank: 
+12:31:40,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+12:31:40,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+12:31:40,346 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+12:31:40,361 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+12:31:40,361 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+12:31:40,361 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+12:31:40,365 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+12:31:40,365 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+12:31:40,365 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 4 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+12:31:40,365 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+12:31:40,366 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+12:31:40,367 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+12:31:40,370 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/scottk/projects/korean-pro-demo/build/resources/main/logback.xml]
+12:31:40,434 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 14
+12:31:40,493 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+12:31:40,495 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+12:31:40,495 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+12:31:40,502 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:31:40,528 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-INFO]
+12:31:40,528 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:31:40,531 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "C:/core/log/info/core-info.log" substituted for "${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.log"
+12:31:40,531 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "[%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level [%thread] [%logger{0}:%line] - %msg%n" substituted for "${LOG_PATTERN}"
+12:31:40,534 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log" substituted for "${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log"
+12:31:40,537 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@776700275 - Archive files will be limited to [10 MB] each.
+12:31:40,539 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@776700275 - No compression will be used
+12:31:40,540 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@776700275 - Will use the pattern C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log for the active file
+12:31:40,558 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@70e8f8e - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log'.
+12:31:40,558 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@70e8f8e - Roll-over at midnight.
+12:31:40,563 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@70e8f8e - Setting initial period to 2025-11-14T03:31:29.797Z
+12:31:40,568 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - Active log file name: C:/core/log/info/core-info.log
+12:31:40,570 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - Setting currentFileLength to 72057 for C:/core/log/info/core-info.log
+12:31:40,570 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - File property is set to [C:/core/log/info/core-info.log]
+12:31:40,571 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-WARN]
+12:31:40,571 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:31:40,572 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "C:/core/log/warn/core-warn.log" substituted for "${LOG_PATH}/warn/${WARN_LOG_FILE_NAME}.log"
+12:31:40,572 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "[%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level [%thread] [%logger{0}:%line] - %msg%n" substituted for "${LOG_PATTERN}"
+12:31:40,572 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@72a7c7e0 - value "C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log" substituted for "${LOG_PATH}/info/${WARN_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log"
+12:31:40,573 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@386163331 - Archive files will be limited to [10 MB] each.
+12:31:40,573 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@386163331 - No compression will be used
+12:31:40,573 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@386163331 - Will use the pattern C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log for the active file
+12:31:40,573 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@5bd03f44 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log'.
+12:31:40,573 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@5bd03f44 - Roll-over at midnight.
+12:31:40,574 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@5bd03f44 - Setting initial period to 2025-11-14T03:31:16.389Z
+12:31:40,574 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - Active log file name: C:/core/log/warn/core-warn.log
+12:31:40,574 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - Setting currentFileLength to 10072 for C:/core/log/warn/core-warn.log
+12:31:40,574 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - File property is set to [C:/core/log/warn/core-warn.log]
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to INFO
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to INFO
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqltiming] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.audit] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.connection] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [log4jdbc.log4j2] to WARN
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.orm.jpa.JpaTransactionManager] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.transaction] to OFF
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.SQL] to DEBUG
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.orm.jdbc.bind] to TRACE
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
+12:31:40,575 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+12:31:40,576 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+12:31:40,576 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-INFO] to Logger[ROOT]
+12:31:40,576 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-WARN] to Logger[ROOT]
+12:31:40,576 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@29626d54 - End of configuration.
+12:31:40,577 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5a63f509 - Registering current configuration as safe fallback point
+12:31:40,577 |-INFO in ch.qos.logback.classic.util.ContextInitializer@1622f1b - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 211 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+12:31:41,043 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 14
+12:31:41,046 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+12:31:41,046 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+12:31:41,046 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+12:31:41,046 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+12:31:41,047 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-INFO]
+12:31:41,047 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:31:41,047 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "C:/core/log/info/core-info.log" substituted for "${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.log"
+12:31:41,047 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "[%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level [%thread] [%logger{0}:%line] - %msg%n" substituted for "${LOG_PATTERN}"
+12:31:41,047 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log" substituted for "${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log"
+12:31:41,048 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@956220493 - Archive files will be limited to [10 MB] each.
+12:31:41,048 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@956220493 - No compression will be used
+12:31:41,048 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@956220493 - Will use the pattern C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log for the active file
+12:31:41,049 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@2314c020 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/core/log/info/core-info.%d{yyyy-MM-dd}.%i.log'.
+12:31:41,049 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@2314c020 - Roll-over at midnight.
+12:31:41,050 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@2314c020 - Setting initial period to 2025-11-14T03:31:29.797Z
+12:31:41,051 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - Active log file name: C:/core/log/info/core-info.log
+12:31:41,051 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - Setting currentFileLength to 72057 for C:/core/log/info/core-info.log
+12:31:41,051 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-INFO] - File property is set to [C:/core/log/info/core-info.log]
+12:31:41,051 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-WARN]
+12:31:41,051 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+12:31:41,051 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "C:/core/log/warn/core-warn.log" substituted for "${LOG_PATH}/warn/${WARN_LOG_FILE_NAME}.log"
+12:31:41,052 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "[%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level [%thread] [%logger{0}:%line] - %msg%n" substituted for "${LOG_PATTERN}"
+12:31:41,053 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@541a6dd5 - value "C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log" substituted for "${LOG_PATH}/info/${WARN_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log"
+12:31:41,053 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@842956607 - Archive files will be limited to [10 MB] each.
+12:31:41,053 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@842956607 - No compression will be used
+12:31:41,053 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@842956607 - Will use the pattern C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log for the active file
+12:31:41,054 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@35cdd868 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/core/log/info/core-warn.%d{yyyy-MM-dd}.%i.log'.
+12:31:41,054 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@35cdd868 - Roll-over at midnight.
+12:31:41,055 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFileNamingAndTriggeringPolicy@35cdd868 - Setting initial period to 2025-11-14T03:31:16.389Z
+12:31:41,055 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - Active log file name: C:/core/log/warn/core-warn.log
+12:31:41,055 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - Setting currentFileLength to 10072 for C:/core/log/warn/core-warn.log
+12:31:41,055 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-WARN] - File property is set to [C:/core/log/warn/core-warn.log]
+12:31:41,055 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[jdbc] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to INFO
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating INFO level on Logger[jdbc.resultsettable] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to INFO
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating INFO level on Logger[jdbc.sqlonly] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqltiming] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[jdbc.sqltiming] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.audit] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[jdbc.audit] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[jdbc.resultset] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.connection] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[jdbc.connection] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [log4jdbc.log4j2] to WARN
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating WARN level on Logger[log4jdbc.log4j2] onto the JUL framework
+12:31:41,056 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.orm.jpa.JpaTransactionManager] to OFF
+12:31:41,056 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[org.springframework.orm.jpa.JpaTransactionManager] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.transaction] to OFF
+12:31:41,057 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating OFF level on Logger[org.springframework.transaction] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.SQL] to DEBUG
+12:31:41,057 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating DEBUG level on Logger[org.hibernate.SQL] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.orm.jdbc.bind] to TRACE
+12:31:41,057 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating TRACE level on Logger[org.hibernate.orm.jdbc.bind] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.netty] to INFO
+12:31:41,057 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating INFO level on Logger[io.netty] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+12:31:41,057 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@7bdfae30 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+12:31:41,057 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+12:31:41,057 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-INFO] to Logger[ROOT]
+12:31:41,057 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-WARN] to Logger[ROOT]
+12:31:41,057 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@7ecf64ab - End of configuration.
+12:31:41,057 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@3f493bca - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+[12:31:41.088] INFO [org.hibernate.validator.internal.util.Version.<clinit>:21] - HV000001: Hibernate Validator 8.0.2.Final
+[12:31:41.136] INFO [com.mk.KoreanProApplication.logStarting:53] - Starting KoreanProApplication using Java 17.0.15 with PID 1192863 (/home/scottk/projects/korean-pro-demo/build/classes/java/main started by scottk in /home/scottk/projects/korean-pro-demo)
+[12:31:41.137] INFO [com.mk.KoreanProApplication.logStartupProfileInfo:658] - The following 1 profile is active: "demo"
+[12:31:41.356] INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[12:31:41.356] INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[12:31:42.042] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:295] - Multiple Spring Data modules found, entering strict repository configuration mode
+[12:31:42.044] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:143] - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[12:31:42.093] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.engine.infrastructure.sp.ko.SpKoAnswerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.094] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.engine.infrastructure.sp.ko.SpKoQuestionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.096] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.file.infrastructure.FileDtlRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.097] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.file.infrastructure.FileRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.099] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.log.infrastructure.LoginLogRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.100] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.log.infrastructure.SysLogRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.101] INFO [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:327] - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.mk.api.log.infrastructure.WebLogRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+[12:31:42.102] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:211] - Finished Spring Data repository scanning in 51 ms. Found 0 JDBC repository interfaces.
+[12:31:42.112] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:295] - Multiple Spring Data modules found, entering strict repository configuration mode
+[12:31:42.114] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[12:31:42.257] INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:211] - Finished Spring Data repository scanning in 139 ms. Found 7 JPA repository interfaces.
+[12:31:42.633] WARN [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:429] - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+[12:31:42.653] INFO [org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping.afterPropertiesSet:239] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[12:31:43.220] INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:111] - Tomcat initialized with port 8081 (http)
+[12:31:43.233] INFO [org.apache.coyote.http11.Http11NioProtocol.log:173] - Initializing ProtocolHandler ["http-nio-8081"]
+[12:31:43.235] INFO [org.apache.catalina.core.StandardService.log:173] - Starting service [Tomcat]
+[12:31:43.236] INFO [org.apache.catalina.core.StandardEngine.log:173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+[12:31:43.277] INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173] - Initializing Spring embedded WebApplicationContext
+[12:31:43.277] INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:296] - Root WebApplicationContext: initialization completed in 1920 ms
+[12:31:43.476] INFO [com.zaxxer.hikari.HikariDataSource.getConnection:109] - HikariPool-1 - Starting...
+[12:31:43.711] INFO [com.zaxxer.hikari.pool.HikariPool.checkFailFast:554] - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@556ae023
+[12:31:43.713] INFO [com.zaxxer.hikari.HikariDataSource.getConnection:122] - HikariPool-1 - Start completed.
+[12:31:43.766] INFO [org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[12:31:43.814] INFO [org.hibernate.Version.logVersion:44] - HHH000412: Hibernate ORM core version 6.6.4.Final
+[12:31:43.847] INFO [org.hibernate.cache.internal.RegionFactoryInitiator.initiateService:50] - HHH000026: Second-level cache disabled
+[12:31:44.112] INFO [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[12:31:44.166] WARN [org.hibernate.orm.deprecation.constructDialect:153] - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[12:31:44.182] INFO [org.hibernate.orm.connections.pooling.initiateService:157] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.19
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[12:31:45.061] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[12:31:45.063] INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:447] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:31:46.286] INFO [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping.<init>:59] - Adding welcome page template: index
+[12:31:46.984] INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:59] - LiveReload server is running on port 35729
+[12:31:47.012] INFO [org.apache.coyote.http11.Http11NioProtocol.log:173] - Starting ProtocolHandler ["http-nio-8081"]
+[12:31:47.029] INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:243] - Tomcat started on port 8081 (http) with context path '/'
+[12:31:47.050] INFO [com.mk.KoreanProApplication.logStarted:59] - Started KoreanProApplication in 6.344 seconds (process running for 6.886)
+[12:32:02.217] INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[12:32:02.217] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:532] - Initializing Servlet 'dispatcherServlet'
+[12:32:02.219] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:554] - Completed initialization in 1 ms
+[12:32:03.423] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[12:32:03.514] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:03.514] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[12:32:03.594] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[12:32:03.595] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[12:32:03.600] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:03.600] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[12:32:34.820] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[12:32:34.832] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:34.832] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[12:32:34.898] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[12:32:34.899] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[12:32:34.904] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:34.905] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[12:32:47.204] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[12:32:47.204] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[12:32:47.251] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[12:32:47.298] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[12:32:47.300] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T12:32:47.279445449]
+[12:32:47.301] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[12:32:47.323] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[12:32:47.324] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114123247261.wav
+[12:32:47.324] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_123247_7454e9fa-ebac-4ffc-8707-99ba6d2f89b7.wav
+[12:32:47.325] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[12:32:47.326] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[12:32:47.326] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [430]
+[12:32:47.327] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[12:32:47.327] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [284034]
+[12:32:47.328] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[12:32:47.328] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[12:32:47.329] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T12:32:47.324734442]
+[12:32:47.329] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[12:32:47.330] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114123247261.wav]
+[12:32:47.330] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T12:32:47.324724273]
+[12:32:47.331] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[12:32:47.331] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_123247_7454e9fa-ebac-4ffc-8707-99ba6d2f89b7.wav]
+[12:32:47.339] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[12:32:47.339] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [430]
+[12:32:47.342] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":94.0,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[12:32:47.347] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[12:32:47.348] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T12:32:47.336565627]
+[12:32:47.349] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[12:32:47.362] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:47.363] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[12:32:56.773] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[12:32:56.776] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [3]
+true
+[12:32:56.780] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:32:56.780] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/3 | processSec : R
+[12:33:02.234] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[12:33:02.237] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [20]
+true
+[12:33:02.242] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:33:02.242] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/20 | processSec : R
+[12:33:11.944] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[12:33:11.946] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [20]
+[12:33:11.955] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[12:33:11.961] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[12:33:11.961] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T12:33:11.960184780]
+[12:33:11.962] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[12:33:11.966] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[12:33:11.967] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114123311958.wav
+[12:33:11.967] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_123311_0c22e23a-1e63-4e00-8d8c-b28f58375424.wav
+[12:33:11.968] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[12:33:11.968] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[12:33:11.969] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [431]
+[12:33:11.969] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[12:33:11.969] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [207574]
+[12:33:11.969] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[12:33:11.970] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[12:33:11.970] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T12:33:11.967514548]
+[12:33:11.970] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[12:33:11.971] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114123311958.wav]
+[12:33:11.971] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T12:33:11.967511117]
+[12:33:11.972] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[12:33:11.972] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_123311_0c22e23a-1e63-4e00-8d8c-b28f58375424.wav]
+[12:33:11.977] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[12:33:11.978] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [431]
+[12:33:11.978] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":92.4,"words":[{"text":"기후","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"변화와","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"환경","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"문제에","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"대한","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"사회적","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"관심과","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"대응","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"필요성이","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"높아지고","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"있습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[12:33:11.979] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [20]
+[12:33:11.980] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T12:33:11.976113833]
+[12:33:11.980] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[12:33:11.988] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:33:11.989] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[12:48:38.188] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[12:48:38.200] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:48:38.200] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[12:48:38.270] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[12:48:38.271] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[12:48:38.275] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[12:48:38.275] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:07:24.516] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:07:24.530] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:07:24.531] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:07:24.613] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:07:24.614] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:07:24.617] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:07:24.618] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:15:44.392] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:15:44.403] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:15:44.404] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:15:44.422] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:15:44.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:15:44.427] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:15:44.428] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:15:45.139] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:15:45.141] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:15:45.144] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:15:45.144] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:15:59.085] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:15:59.086] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:15:59.101] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:15:59.107] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:15:59.108] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:15:59.106031029]
+[13:15:59.109] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:15:59.114] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:15:59.115] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114131559103.wav
+[13:15:59.115] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_131559_a40d98c9-9edc-4da8-ae27-3de234b4c7e1.wav
+[13:15:59.116] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:15:59.117] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:15:59.117] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [432]
+[13:15:59.117] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:15:59.117] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [229420]
+[13:15:59.118] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:15:59.118] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:15:59.118] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:15:59.115493329]
+[13:15:59.119] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:15:59.119] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114131559103.wav]
+[13:15:59.119] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:15:59.115488525]
+[13:15:59.119] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:15:59.120] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_131559_a40d98c9-9edc-4da8-ae27-3de234b4c7e1.wav]
+[13:15:59.126] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:15:59.127] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [432]
+[13:15:59.128] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":87.6,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:15:59.132] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:15:59.133] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:15:59.125120682]
+[13:15:59.133] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:15:59.142] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:15:59.142] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:17:05.529] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:17:05.530] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:17:05.543] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:17:05.547] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:17:05.548] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:17:05.547155857]
+[13:17:05.548] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:17:05.552] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:17:05.552] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114131705545.wav
+[13:17:05.552] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_131705_6fdc004c-e443-4dd9-99df-557cc817ab92.wav
+[13:17:05.553] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:17:05.553] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:17:05.554] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [433]
+[13:17:05.554] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:17:05.554] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [229420]
+[13:17:05.554] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:17:05.555] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:17:05.555] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:17:05.553111341]
+[13:17:05.555] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:17:05.556] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114131705545.wav]
+[13:17:05.556] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:17:05.553107984]
+[13:17:05.556] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:17:05.556] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_131705_6fdc004c-e443-4dd9-99df-557cc817ab92.wav]
+[13:17:05.565] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:17:05.565] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [433]
+[13:17:05.566] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":94.1,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:17:05.566] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:17:05.566] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:17:05.563819156]
+[13:17:05.567] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:17:05.576] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:17:05.576] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:19:23.712] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:19:23.722] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:19:23.722] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:19:23.743] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:19:23.744] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:19:23.748] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:19:23.749] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:19:37.819] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:19:37.820] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:19:37.835] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:19:37.840] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:19:37.840] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:19:37.839322363]
+[13:19:37.841] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:19:37.845] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:19:37.845] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114131937837.wav
+[13:19:37.845] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_131937_0529ee3f-9098-49a5-a016-c966e93feb95.wav
+[13:19:37.846] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:19:37.846] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:19:37.846] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [434]
+[13:19:37.847] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:19:37.847] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [240342]
+[13:19:37.847] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:19:37.847] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:19:37.847] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:19:37.845779691]
+[13:19:37.848] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:19:37.848] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114131937837.wav]
+[13:19:37.848] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:19:37.845776479]
+[13:19:37.849] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:19:37.849] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_131937_0529ee3f-9098-49a5-a016-c966e93feb95.wav]
+[13:19:37.853] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:19:37.853] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [434]
+[13:19:37.854] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":76.7,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:19:37.854] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:19:37.855] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:19:37.852582553]
+[13:19:37.855] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:19:37.860] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:19:37.861] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:20:33.861] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:20:33.869] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:20:33.869] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:20:33.894] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:20:33.895] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:20:33.899] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:20:33.899] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:20:48.581] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:20:48.582] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:20:48.595] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:20:48.599] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:20:48.600] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:20:48.598185774]
+[13:20:48.600] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:20:48.604] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:20:48.604] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114132048596.wav
+[13:20:48.604] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_132048_bd76f770-260f-4395-921e-1c68aecccc21.wav
+[13:20:48.605] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:20:48.605] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:20:48.605] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [435]
+[13:20:48.606] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:20:48.606] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [251266]
+[13:20:48.606] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:20:48.606] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:20:48.607] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:20:48.604817018]
+[13:20:48.607] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:20:48.607] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114132048596.wav]
+[13:20:48.607] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:20:48.604812816]
+[13:20:48.608] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:20:48.608] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_132048_bd76f770-260f-4395-921e-1c68aecccc21.wav]
+[13:20:48.612] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:20:48.612] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [435]
+[13:20:48.613] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":92.4,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:20:48.613] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:20:48.613] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:20:48.611556447]
+[13:20:48.614] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:20:48.619] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:20:48.619] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:21:53.861] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:21:53.870] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:21:53.870] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:21:53.887] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:21:53.888] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:21:53.891] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:21:53.891] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:22:08.212] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:22:08.213] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:22:08.229] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:22:08.234] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:22:08.234] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:22:08.233489430]
+[13:22:08.235] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:22:08.240] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:22:08.240] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114132208230.wav
+[13:22:08.240] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_132208_f03384c9-0a69-43c1-a5a8-852e29526c03.wav
+[13:22:08.241] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:22:08.241] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:22:08.242] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [436]
+[13:22:08.242] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:22:08.242] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [305878]
+[13:22:08.242] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:22:08.242] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:22:08.243] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:22:08.241017409]
+[13:22:08.243] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:22:08.243] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114132208230.wav]
+[13:22:08.243] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:22:08.241012153]
+[13:22:08.244] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:22:08.244] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_132208_f03384c9-0a69-43c1-a5a8-852e29526c03.wav]
+[13:22:08.248] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:22:08.248] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [436]
+[13:22:08.248] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":93.6,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:22:08.249] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:22:08.249] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:22:08.247431836]
+[13:22:08.249] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:22:08.259] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:22:08.259] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:23:34.466] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:23:34.484] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:23:34.484] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:23:35.058] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:23:35.060] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:23:35.064] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:23:35.064] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:23:51.099] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:23:51.100] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:23:51.114] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:23:51.121] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:23:51.121] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:23:51.120135284]
+[13:23:51.122] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:23:51.126] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:23:51.127] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114132351116.wav
+[13:23:51.127] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_132351_f9fe8388-adeb-4753-a702-a78d1927de49.wav
+[13:23:51.128] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:23:51.128] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:23:51.128] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [437]
+[13:23:51.128] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:23:51.128] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [273110]
+[13:23:51.129] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:23:51.129] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:23:51.129] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:23:51.127417763]
+[13:23:51.130] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:23:51.130] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114132351116.wav]
+[13:23:51.130] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:23:51.127414280]
+[13:23:51.130] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:23:51.131] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_132351_f9fe8388-adeb-4753-a702-a78d1927de49.wav]
+[13:23:51.135] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:23:51.136] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [437]
+[13:23:51.136] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":84.6,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:23:51.137] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:23:51.137] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:23:51.134753401]
+[13:23:51.137] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:23:51.144] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:23:51.144] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:23:53.807] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:23:53.809] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:23:53.812] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:23:53.812] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:24:51.619] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:24:51.620] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+[13:24:51.633] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:24:51.637] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:24:51.638] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:24:51.637075730]
+[13:24:51.638] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:24:51.642] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:24:51.642] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114132451634.wav
+[13:24:51.642] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_132451_e2ae3923-67c6-4521-b84d-60c3524e2b1c.wav
+[13:24:51.643] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:24:51.643] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:24:51.643] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [438]
+[13:24:51.644] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:24:51.644] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [273110]
+[13:24:51.644] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:24:51.644] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:24:51.644] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:24:51.642789174]
+[13:24:51.645] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:24:51.645] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114132451634.wav]
+[13:24:51.645] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:24:51.642785663]
+[13:24:51.645] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:24:51.646] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_132451_e2ae3923-67c6-4521-b84d-60c3524e2b1c.wav]
+[13:24:51.650] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:24:51.650] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [438]
+[13:24:51.651] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":77.9,"words":[{"text":"올해","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"우리나라의","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"경제","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"성장률이","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"예상을","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"웃돌며","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"국내총생산이","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"크게","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"증가한","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"것으로","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"나타났습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:24:51.651] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [1]
+[13:24:51.651] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:24:51.649535848]
+[13:24:51.652] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:24:51.659] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:24:51.659] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:24:56.870] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:24:56.873] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:24:56.876] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:24:56.876] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:24:56.901] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:24:56.902] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:24:56.905] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:24:56.905] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:25:00.113] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:25:00.115] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [3]
+true
+[13:25:00.117] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:25:00.117] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/3 | processSec : R
+[13:27:20.883] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    order by
+        skq1_0."order"
+[13:27:20.890] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:20.890] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question | processSec : R
+[13:27:20.921] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:27:20.922] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:27:20.924] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:20.924] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R
+[13:27:25.654] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:27:25.656] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [6]
+true
+[13:27:25.659] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:25.659] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/6 | processSec : R
+[13:27:37.405] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0.fst,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns 
+    from
+        sp_ko_question skq1_0 
+    where
+        skq1_0.ko_id=?
+[13:27:37.405] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [6]
+[13:27:37.414] WARN [com.mk.api.engine.application.SpDemoService.createEvaluate:173] - [Demo Mode] SpeechPro API unavailable, using mock response
+[13:27:37.417] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file
+        (reg_dt, rgtr_sys_id) 
+    values
+        (?, ?)
+[13:27:37.417] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:TIMESTAMP) <- [2025-11-14T13:27:37.416815512]
+[13:27:37.418] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [99999999999999999]
+[13:27:37.421] INFO [com.mk.common.FileUtil.uploadFile:93] - 저장 폴더 : speechpro-ko
+[13:27:37.421] INFO [com.mk.common.FileUtil.uploadFile:94] - 원본 파일명 : demo_20251114132737414.wav
+[13:27:37.422] INFO [com.mk.common.FileUtil.uploadFile:95] - 저장 파일명 : 20251114_132737_64bfe90c-3303-4857-888c-91c703e471b8.wav
+[13:27:37.422] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        com_file_dtl
+        (del_yn, file_seq, file_extsn, file_size, file_sn, file_stre_path, mdfcn_dt, mdfr_sys_id, orignl_file_nm, reg_dt, rgtr_sys_id, stre_file_nm) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[13:27:37.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:VARCHAR) <- [N]
+[13:27:37.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:BIGINT) <- [439]
+[13:27:37.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:VARCHAR) <- [wav]
+[13:27:37.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:BIGINT) <- [240342]
+[13:27:37.423] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:INTEGER) <- [1]
+[13:27:37.424] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (6:VARCHAR) <- [speechpro-ko/202511/]
+[13:27:37.424] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (7:TIMESTAMP) <- [2025-11-14T13:27:37.422208980]
+[13:27:37.425] TRACE[org.hibernate.orm.jdbc.bind.logNullBinding:35] - binding parameter (8:BIGINT) <- [null]
+[13:27:37.425] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (9:VARCHAR) <- [demo_20251114132737414.wav]
+[13:27:37.425] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (10:TIMESTAMP) <- [2025-11-14T13:27:37.422205736]
+[13:27:37.426] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (11:BIGINT) <- [99999999999999999]
+[13:27:37.426] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (12:VARCHAR) <- [20251114_132737_64bfe90c-3303-4857-888c-91c703e471b8.wav]
+[13:27:37.431] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    insert 
+    into
+        sp_ko_answer
+        (file_seq, result, ko_id, submitted_at, sys_id) 
+    values
+        (?, ?, ?, ?, ?)
+[13:27:37.431] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [439]
+[13:27:37.432] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (2:JSON) <- [{"result":{"result":{"quality":{"sentences":[null,{"score":81.0,"words":[{"text":"한국인의","score":70.0,"syll":[{"text":"test","score":65.0,"phones":[{"symbol":"ㄱ","score":60.0}]}]},{"text":"식사","score":71.0,"syll":[{"text":"test","score":66.0,"phones":[{"symbol":"ㄱ","score":61.0}]}]},{"text":"패턴이","score":72.0,"syll":[{"text":"test","score":67.0,"phones":[{"symbol":"ㄱ","score":62.0}]}]},{"text":"바뀌어","score":73.0,"syll":[{"text":"test","score":68.0,"phones":[{"symbol":"ㄱ","score":63.0}]}]},{"text":"야채와","score":74.0,"syll":[{"text":"test","score":69.0,"phones":[{"symbol":"ㄱ","score":64.0}]}]},{"text":"과일","score":75.0,"syll":[{"text":"test","score":70.0,"phones":[{"symbol":"ㄱ","score":65.0}]}]},{"text":"섭취는","score":76.0,"syll":[{"text":"test","score":71.0,"phones":[{"symbol":"ㄱ","score":66.0}]}]},{"text":"줄고","score":77.0,"syll":[{"text":"test","score":72.0,"phones":[{"symbol":"ㄱ","score":67.0}]}]},{"text":"고기","score":78.0,"syll":[{"text":"test","score":73.0,"phones":[{"symbol":"ㄱ","score":68.0}]}]},{"text":"소비가","score":79.0,"syll":[{"text":"test","score":74.0,"phones":[{"symbol":"ㄱ","score":69.0}]}]},{"text":"증가했습니다.","score":80.0,"syll":[{"text":"test","score":75.0,"phones":[{"symbol":"ㄱ","score":70.0}]}]}]}]}}},"status":"completed"}]
+[13:27:37.432] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (3:BIGINT) <- [6]
+[13:27:37.432] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (4:TIMESTAMP) <- [2025-11-14T13:27:37.430670041]
+[13:27:37.433] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (5:BIGINT) <- [99999999999999999]
+[13:27:37.438] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:37.438] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/evaluate | processSec : C
+[13:27:38.585] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:27:38.587] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [6]
+true
+[13:27:38.589] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:38.589] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/6 | processSec : R
+[13:27:46.900] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        fd1_0.file_dtl_seq,
+        fd1_0.del_yn,
+        fd1_0.file_seq,
+        fd1_0.file_extsn,
+        fd1_0.file_size,
+        fd1_0.file_sn,
+        fd1_0.file_stre_path,
+        fd1_0.mdfcn_dt,
+        fd1_0.mdfr_sys_id,
+        fd1_0.orignl_file_nm,
+        fd1_0.reg_dt,
+        fd1_0.rgtr_sys_id,
+        fd1_0.stre_file_nm 
+    from
+        com_file_dtl fd1_0 
+    left join
+        com_file f1_0 
+            on f1_0.file_seq=fd1_0.file_seq 
+    where
+        f1_0.file_seq=?
+[13:27:46.901] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [439]
+[13:27:46.910] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        f1_0.file_seq,
+        f1_0.reg_dt,
+        f1_0.rgtr_sys_id 
+    from
+        com_file f1_0 
+    where
+        f1_0.file_seq=?
+[13:27:46.910] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [439]
+[13:27:46.929] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:46.929] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/files | processSec : R
+[13:27:46.968] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        fd1_0.file_dtl_seq,
+        fd1_0.del_yn,
+        f1_0.file_seq,
+        f1_0.reg_dt,
+        f1_0.rgtr_sys_id,
+        fd1_0.file_extsn,
+        fd1_0.file_size,
+        fd1_0.file_sn,
+        fd1_0.file_stre_path,
+        fd1_0.mdfcn_dt,
+        fd1_0.mdfr_sys_id,
+        fd1_0.orignl_file_nm,
+        fd1_0.reg_dt,
+        fd1_0.rgtr_sys_id,
+        fd1_0.stre_file_nm 
+    from
+        com_file_dtl fd1_0 
+    left join
+        com_file f1_0 
+            on f1_0.file_seq=fd1_0.file_seq 
+    where
+        fd1_0.file_dtl_seq=?
+[13:27:46.969] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [445]
+[13:27:46.976] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/file/445 | processSec : R
+[13:27:56.823] DEBUG[org.hibernate.SQL.logStatement:135] - 
+    select
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns,
+        exists(select
+            1 
+        from
+            sp_ko_answer ska2_0 
+        where
+            ska2_0.ko_id=skq1_0.ko_id) 
+    from
+        sp_ko_question skq1_0 
+    left join
+        sp_ko_answer ska1_0 
+            on skq1_0.ko_id=ska1_0.ko_id 
+    where
+        skq1_0.ko_id=? 
+    group by
+        skq1_0.ko_id,
+        skq1_0."order",
+        skq1_0.sentence,
+        skq1_0.syll_ltrs,
+        skq1_0.syll_phns
+[13:27:56.825] TRACE[org.hibernate.orm.jdbc.bind.logBinding:24] - binding parameter (1:BIGINT) <- [1]
+true
+[13:27:56.828] INFO [com.mk.config.logging.SysLogAspect.createSysLog:197] - create syslog > apiResponse.status : 200
+[13:27:56.828] INFO [com.mk.config.logging.SysLogAspect.createSysLog:206] - create syslog > uri : /api/sp/demo/question/1 | processSec : R

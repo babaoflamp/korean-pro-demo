@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <title>매일경제 AI경제 캠프</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<header id="header" class="sub"></header>
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<div id="wrap" class="sub">
+
+  <!-- 기존 maxinner에서 l-maxinner 클래스 변경으로 인한 넓이 변화 -->
+  <div class="l-maxinner">
+    
+    <div class="sub-tit">
+      <h2>나의 문의내역</h2>
+    </div>
+
+    <!-- 하단 여백 추가로 인한 클래스 추가 -->
+    <div class="radius-box st02">
+
+      <div class="inquiry_wrap">
+        <table>
+          <caption>나의 문의 내역 리스트</caption>
+          <colgroup>
+            <col style = "width:8%">
+            <col style = "width:72%">
+            <col style = "width:20%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">제목</th>
+              <th scope="col">등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="accordion-toggle" tabindex="0" onclick="openModal('alert-popup')">
+              <td>10</td>
+              <td>
+                <span class="badges st03">확인중</span>
+                녹음이 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>9</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>8</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요 녹음이 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>
+                  마이크 설정을 확인하고 다시 시도해 주세요. 마이크 설정을 확인하고 다시 시도해 주세요. 마이크 설정을 확인하고 다시 시도해 주세요.
+                  마이크 설정을 확인하고 다시 시도해 주세요. 마이크 설정을 확인하고 다시 시도해 주세요. 마이크 설정을 확인하고 다시 시도해 주세요.
+                </p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>7</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>6</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>5</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>4</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>3</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>2</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+            <tr class="accordion-toggle" tabindex="0">
+              <td>1</td>
+              <td>
+                <span class="badges st01">답변완료</span>
+                마이크가 안 돼요
+              </td>
+              <td>8888-88-88</td>
+            </tr>
+            <tr class="accordion-content" hidden>
+              <td></td>
+              <td colspan="2" class="cont">
+                <p>마이크 설정을 확인하고 다시 시도해 주세요.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="num-paging">
+        <ul>
+          <li class="prev">
+            <a href="#" title="전 페이지 이동"></a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">1</a>
+          </li>
+          <li class="active">
+            <a href="#" title="페이지 이동">2</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">3</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">4</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">5</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">6</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">7</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">8</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">9</a>
+          </li>
+          <li>
+            <a href="#" title="페이지 이동">10</a>
+          </li>
+          <li class="next">
+            <a href="#" title="다음 페이지 이동"></a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- 알림 팝업 -->
+<div class="popup-wrap alert-popup">
+  <div class="popup">
+    <div class="pop-tit">
+      <p>알림</p>
+      <i class="close-btn">
+        <span class="hidden">닫기</span>
+      </i>
+    </div>
+    <div class="pop-cont">
+      
+      <p>
+        문의 내용을 확인 중이오니 잠시만 기다려주세요.
+      </p>
+
+      <div class="content-btn btn-wrap">
+        <a href="#" class="btn btn-primary" title="">확인</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<footer id="footer" class="sub"></footer>
+
+
+<script>
+
+  //공통 header & footer 를 관리하기 위한 페이지 분리 스크립트
+  document.addEventListener("DOMContentLoaded", function() {
+    $('#header').load("./header.html");
+    $('#footer').load("./footer.html");
+  });
+
+
+  //table tab
+  document.addEventListener("DOMContentLoaded", function () {
+    const rows = document.querySelectorAll(".accordion-toggle");
+
+    rows.forEach((row) => {
+      row.addEventListener("click", function () {
+        const nextRow = this.nextElementSibling;
+        if (nextRow && nextRow.classList.contains("accordion-content")) {
+          const isOpen = !nextRow.hidden;
+
+          document.querySelectorAll(".accordion-content").forEach(content => content.hidden = true);
+          document.querySelectorAll(".accordion-toggle").forEach(toggle => toggle.classList.remove("active"));
+
+          if (!isOpen) {
+            nextRow.hidden = false;
+            this.classList.add("active");
+          }
+        }
+      });
+
+      row.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          this.click();
+        }
+      });
+    });
+  });
+
+</script>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+</html>

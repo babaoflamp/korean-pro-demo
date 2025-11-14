@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <title>매일경제 AI경제 캠프</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<header id="header" class="sub"></header>
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<div id="wrap" class="sub">
+
+  <div class="maxinner">
+    
+    <div class="sub-tit">
+      <h2>캠프 신청하기</h2>
+    </div>
+
+    <div class="anchor-btn">
+      <ul>
+        <li class="list">
+          <a href="#" title="섹션 이동">
+            <div class="circle-line">
+              <p>1</p>
+            </div>
+            <p class="tit">
+              캠프 신청서 작성
+            </p>
+          </a>
+        </li>
+        <li class="list active">
+          <a href="#" title="섹션 이동">
+            <div class="circle-line">
+              <p>2</p>
+            </div>
+            <p class="tit">
+              진단평가 응시
+            </p>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#" title="섹션 이동">
+            <div class="circle-line">
+              <p>3</p>
+            </div>
+            <p class="tit">
+              신청서 확인
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form>
+
+      <div class="label-wrap">
+        <div class="label-tit">
+          <p>진단평가 응시</p>
+        </div>
+        <div class="label-cont">
+          <div class="line-box">
+            <p>
+              AI 경제 캠프 참여 효과를 높이기 위해 간단히 경제 수준을 평가하고자 하오니
+              <br class="pc-br">
+              아래 5개의 문제를 잘 보시고 정답을 골라 주세요.
+            </p>
+          </div>
+          <div class="form-flex lg-top">
+            <div class="form-box">
+              <p class="camp-radio-tit">
+                1. 다음은 한 가정의 소득을 나타낸 것이다. 이중 재산소득만을 고른 것은?
+              </p>
+              <div class="camp-img">
+                <img src="./img/sub-img07.png" alt="">
+              </div>
+              <div class="camp-radio-list">
+                <ul>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <!-- ** 페이지 하단 input 관련 스크립트 추가 확인 ** -->
+                      <input type="radio" id="campRadio0101" name="campRadioList01">
+                      <label for="campRadio0101" tabindex="0">
+                        <span> 아버지, 어머니</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn active">
+                      <input type="radio" id="campRadio0102" name="campRadioList01" checked>
+                      <label for="campRadio0102" tabindex="0">
+                        <span>할머니, 어머니</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0103" name="campRadioList01">
+                      <label for="campRadio0103" tabindex="0">
+                        <span>할머니, 아버지</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0104" name="campRadioList01">
+                      <label for="campRadio0104" tabindex="0">
+                        <span>할아버지, 할머니</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0105" name="campRadioList01">
+                      <label for="campRadio0105" tabindex="0">
+                        <span>할아버지, 자녀</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box">
+              <p class="camp-radio-tit">
+                2. 수요와 공급에 대한 설명으로 옳지 않은 것은?
+              </p>
+              <div class="camp-radio-list">
+                <ul>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0201" name="campRadioList02">
+                      <label for="campRadio0201" tabindex="0">
+                        <span>A국 국민들의 소비성향이 저축성향보다 높다고 할 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn active">
+                      <input type="radio" id="campRadio0202" name="campRadioList02" checked>
+                      <label for="campRadio0202" tabindex="0">
+                        <span>B국 국민들은 저축성향이 소비성향보다 높다고 할 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0203" name="campRadioList02">
+                      <label for="campRadio0203" tabindex="0">
+                        <span>A국의 저축률 하락은 사람들이 소비를 유지하기 위해 저축을 줄인 결과라고 할 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0204" name="campRadioList02">
+                      <label for="campRadio0204" tabindex="0">
+                        <span>A국은 저축률이 낮아졌지만 활성화된 소비로 인해 투자가 늘어날 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0205" name="campRadioList02">
+                      <label for="campRadio0205" tabindex="0">
+                        <span>A국은 저축률이 낮아졌지만 활성화된 소비로 인해 투자가 늘어날 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box">
+              <p class="camp-radio-tit">
+                3. 다음은 어느 국가의 18개월간 물가상승률을 그래프로 나타낸 것이다. 이와 같은 그래프에 대한 옳은 설명으로 가장 거리가 먼 것은?
+              </p>
+              <div class="camp-img">
+                <img src="./img/sub-img08.png" alt="">
+              </div>
+              <div class="camp-radio-list">
+                <ul>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0301" name="campRadioList03">
+                      <label for="campRadio0301" tabindex="0">
+                        <span>화폐가치가 떨어져 월급 근로자의 실질 소득은 감소했을 것이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn active">
+                      <input type="radio" id="campRadio0302" name="campRadioList03" checked>
+                      <label for="campRadio0302" tabindex="0">
+                        <span>대출을 받는 채무자의 입장에서는 이자 부담이 줄었을 것이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0303" name="campRadioList03">
+                      <label for="campRadio0303" tabindex="0">
+                        <span>저축에 대한 수요가 감소했을 것이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0304" name="campRadioList03">
+                      <label for="campRadio0304" tabindex="0">
+                        <span>소비를 줄이고 저축을 하려는 사람들이 늘어났을 것이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0305" name="campRadioList03">
+                      <label for="campRadio0305" tabindex="0">
+                        <span>대출을 받아 소비욕구를 충족시키는 것이 유리할 수 있다.</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box">
+              <p class="camp-radio-tit">
+                4. A는 다음의 예금상품을 가입하였다. A가 만기 시 지급받을 원리금으로 옳은 것은?
+              </p>
+              <div class="camp-img">
+                <img src="./img/sub-img09.png" alt="">
+              </div>
+              <div class="camp-radio-list">
+                <ul>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0401" name="campRadioList04">
+                      <label for="campRadio0401" tabindex="0">
+                        <span>1,000,000원</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn active">
+                      <input type="radio" id="campRadio0402" name="campRadioList04" checked>
+                      <label for="campRadio0402" tabindex="0">
+                        <span>1,100,000원</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0403" name="campRadioList04">
+                      <label for="campRadio0403" tabindex="0">
+                        <span>1,110,000원</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0404" name="campRadioList04">
+                      <label for="campRadio0404" tabindex="0">
+                        <span>1,120,000원</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0405" name="campRadioList04">
+                      <label for="campRadio0405" tabindex="0">
+                        <span>1,125,000원</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-box">
+              <p class="camp-radio-tit">
+                5. 다음은 A국과 B국의 저축률을 비교한 것이다. 이를 근거로 경제동향을 해석한 내용으로 옳지 않은 것은?
+              </p>
+              <div class="camp-img">
+                <img src="./img/sub-img10.png" alt="">
+              </div>
+              <div class="camp-radio-list">
+                <ul>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0501" name="campRadioList05">
+                      <label for="campRadio0501" tabindex="0">
+                        <span>공연을 관람하는 선택의 편익이 ㉢보다 적더라도 공연을 선택하는 것이 합리적이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn active">
+                      <input type="radio" id="campRadio0502" name="campRadioList05" checked>
+                      <label for="campRadio0502" tabindex="0">
+                        <span>㉡을 결정하는 데 있어 ㉠은 매몰비용이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0503" name="campRadioList05">
+                      <label for="campRadio0503" tabindex="0">
+                        <span>㉢은 B가 아르바이트를 하기로 결정할 경우의 기회비용이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0504" name="campRadioList05">
+                      <label for="campRadio0504" tabindex="0">
+                        <span>㉢은 B가 공연을 관람하기로 결정할 경우의 명시적비용이다.</span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="camp-radio-btn">
+                      <input type="radio" id="campRadio0505" name="campRadioList05">
+                      <label for="campRadio0505" tabindex="0">
+                        <span>B가 공연 티켓을 구입할 때 판단한 공연 관람의 편익은 60,000원보다 크다.</span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content-btn">
+            <a href="./camp_apply03.html" title="페이지 이동" class="btn btn-primary">제출하기</a>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- 서브페이지에는 .sub class 추가 -->
+<footer id="footer" class="sub"></footer>
+
+
+<script>
+
+  //공통 header & footer 를 관리하기 위한 페이지 분리 스크립트
+  document.addEventListener("DOMContentLoaded", function() {
+    $('#header').load("./header.html");
+    $('#footer').load("./footer.html");
+  });
+
+
+  // input checked 시 class 추가
+  document.addEventListener("DOMContentLoaded", function() {
+    $(".camp-radio-list input[type='radio']").on("change", function() {
+        const $this = $(this);
+        const $parentList = $this.closest(".camp-radio-list");
+
+        $parentList.find(".camp-radio-btn").removeClass("active");
+
+        $this.closest(".camp-radio-btn").addClass("active");
+    });
+  })
+
+</script>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+</html>

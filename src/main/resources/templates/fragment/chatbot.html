@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<!-- Chat AI 팝업 -->
+	<div th:fragment="chat_module" class="popup-wrap chat-gpt-popup">
+		<div class="popup">
+			<div class="inner">
+				<div class="pop-tit">
+					<p>Chat AI</p>
+					<i class="close-btn"> <span class="hidden">닫기</span></i>
+				</div>
+				<div class="pop-cont">
+					<div class="chat-content">
+						<div class="user-message chat-message">
+							<div class="inner">
+								<i><span class="hidden">유저</span></i>
+								<p></p>
+							</div>
+						</div>
+						<div class="counselor-message chat-message">
+							<div class="inner">
+								<i> <span class="hidden">챗봇</span>
+								</i>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="chat-mic-box">
+						<div class="chat-input">
+							<input type="text" id="chatInput" placeholder="무엇이든 물어보세요." >
+							<button type="button" id="submitBtn" >
+								<i></i> <span class="hidden">전송</span>
+							</button>
+						</div>
+						<div class="mic-box">
+							<button type="button" class="audio-ico" id="stopRecord" hidden>
+				              <span class="hidden">녹음중지</span>
+				            </button>
+							<button type="button" class="mic-ico" id="startRecord">
+								<span class="hidden">녹음</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 로딩 영역 팝업 -->
+		<div class="popup-wrap loading-popup">
+		  <div class="loading">
+		    <div class="ico">
+		      <i></i>
+		      <i></i>
+		    </div>
+		    <p>AI가 응답을 생성중입니다.</p>
+		  </div>
+		</div>
+
+		<!-- script -->
+		<script th:inline="javascript">
+			const host = /*[[@{${@environment.getProperty('api.stt.host')}}]]*/ '';
+			const port = /*[[@{${@environment.getProperty('api.stt.port')}}]]*/ '';
+		</script>
+		<script th:src="@{/js/fragment/chatbot.js}"></script>
+		<script th:src="@{/js/recordRTC.js}"></script>
+		<script th:src="@{/js/stt-websocket.js}"></script>
+	</div>
+</body>
+</html>

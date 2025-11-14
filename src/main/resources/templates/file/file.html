@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script>
+    	let itemFile = '[[${itemFile}]]';
+    </script>
+</head>
+<body>
+
+<th:block th:if="${itemFile == 'regist' or itemFile == 'edit'}">
+    <!-- 첨부파일 추가 버튼(등록/수정) -->
+    <div class="form_file__group">
+        <div class="form_file__item">
+            <button type="button" class="form_item__file_btn js_file_clone" onclick="fn_fileAdd();"><i class="icon_file_add"></i></button>
+        </div>
+    </div>
+
+    <!-- 첨부파일 리스트(등록/수정) -->
+    <div class="form_file__group js_add_file_group" id="fileGroup">
+        <div class="form_file__item fileDiv fileAdd">
+            <label class="form_file__label fileLabel">파일찾기</label>
+            <span class="form_file__text fileNm"></span>
+            <input type="file" class="blind file">
+            <button type="button" class="form_item__file_btn js_file_remove fileRegist" onclick="fn_fileDel(this);"><i class="icon_file_remove"></i></button>
+        </div>
+        <div class="form_file__item fileDiv fileExist" th:if="${itemFile == 'edit'}">
+            <input type="hidden" name="fileDtlSeq">
+            <span class="form_file__text fileNm"></span>
+            <button type="button" class="form_item__file_btn js_file_remove" onclick="fn_fileDel(this);"><i class="icon_file_remove"></i></button>
+        </div>
+    </div>
+</th:block>
+
+<!-- 첨부파일 리스트(상세) -->
+<div class="form_file__group" th:if="${itemFile == 'info'}">
+    <ul class="approval_line__link_list" id="fileList">
+        <li class="fileLi">
+            <a href="" class="approval_line__sub_link">
+                <i class="icon_file_down02"></i>
+                <span class="fileNm"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- 파일 유틸 -->
+<script th:src="@{/js/file-util.js}"></script>
+
+</body>
+</html>

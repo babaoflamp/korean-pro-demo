@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+				xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <title>매일경제 틴매경 AI 경제캠프</title>
+  <!-- <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon"> -->
+  <link rel="stylesheet" href="/pub/css/reset.css">
+  <link rel="stylesheet" href="/pub/css/style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+
+  <script src="/pub/js/common.js" defer></script>
+  <script src="/js/common-dev.js" defer></script>
+</head>
+<body>
+	<header id="header" class="sub">
+		<th:block th:replace="~{layout/header}"/>
+	</header>
+
+	<th:block layout:fragment="subbody"/>
+
+	<footer id="footer" class="sub">
+		<th:block th:replace="~{layout/footer}"/>
+	</footer>
+
+</body>
+</html>

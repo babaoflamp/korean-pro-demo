@@ -1,0 +1,83 @@
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Pretendard Extra Light"), 
+  url('./Pretendard-ExtraLight.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Pretendard Light"), 
+  url('./Pretendard-Light.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Pretendard Thin"), 
+  url('./Pretendard-Thin.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pretendard Regular"), 
+  url('./Pretendard-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Pretendard Medium"), 
+  url('./Pretendard-Medium.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Pretendard Semi Bold"), 
+  url('./Pretendard-SemiBold.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Pretendard Bold"), 
+  url('./Pretendard-Bold.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Pretendard Extra Bold"), 
+  url('./Pretendard-ExtraBold.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Pretendard Black"), 
+  url('./Pretendard-Black.woff2') format("woff2");
+}
+
+
+
+
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,7 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=Left, Property=Active">
+<rect width="40" height="40" rx="20" fill="#F4F4F4"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="black" stroke-opacity="0.08"/>
+<path id="icon" d="M22 15L17 20L22 25" stroke="#FF7A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

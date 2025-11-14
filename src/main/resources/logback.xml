@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 로그 파일이 저장될 경로 -->
+    <property name="LOG_PATH" value="C:/core/log"/>
+
+    <!-- 로그 파일 이름 -->
+    <property name="INFO_LOG_FILE_NAME" value="core-info"/>
+    <property name="WARN_LOG_FILE_NAME" value="core-warn"/>
+
+    <!-- 로그 출력 패턴 -->
+    <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level [%thread] [%logger{0}:%line] - %msg%n"/>
+
+    <!-- 패턴 색상 적용 %clr(pattern){color} -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+
+	<!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    	<!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter> -->
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}] %clr(%-5level)[%logger.%method:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Info File Appender -->
+    <appender name="FILE-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 파일 경로 설정 -->
+        <file>${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.log</file>
+        <!-- 출력패턴 설정-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- .gz,.zip 등을 넣으면 자동 일자별 로그파일 압축 -->
+        	<fileNamePattern>${LOG_PATH}/info/${INFO_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+        	<!-- 파일당 최고 용량 kb, mb, gb -->
+        	<maxFileSize>10MB</maxFileSize>
+        	<!-- 일자별 로그파일 최대 보관주기(~일), 해당 설정일 이상된 파일은 자동으로 제거-->
+        	<maxHistory>30</maxHistory>
+        	<!--<MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>-->
+    	</rollingPolicy>
+    </appender>
+
+    <!-- Warn File Appender -->
+    <appender name="FILE-WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+        <file>${LOG_PATH}/warn/${WARN_LOG_FILE_NAME}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- .gz,.zip 등을 넣으면 자동 일자별 로그파일 압축 -->
+        	<fileNamePattern>${LOG_PATH}/info/${WARN_LOG_FILE_NAME}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+        	<!-- 파일당 최고 용량 kb, mb, gb -->
+        	<maxFileSize>10MB</maxFileSize>
+        	<!-- 일자별 로그파일 최대 보관주기(~일), 해당 설정일 이상된 파일은 자동으로 제거-->
+        	<maxHistory>60</maxHistory>
+        	<!--<MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>-->
+    	</rollingPolicy>
+    </appender>
+
+	<!-- log4jdbc 옵션 설정 -->
+	<logger name="jdbc" 				level="OFF"/>
+	<!-- sql 결과 조회된 데이터의 table을 로그로 남긴다.  -->
+    <logger name="jdbc.resultsettable" 	level="INFO" />
+	<!-- sql문만을 로그로 남기며, preparedStatement일 경우 argument값으로 대체된 sql문이 보여진다. -->
+    <logger name="jdbc.sqlonly"			level="INFO" />
+	<!-- sql문과 해당 sql을 실행시키는데 수행된 시간정보(miliseconds)를 포함한다. -->
+    <logger name="jdbc.sqltiming" 		level="OFF"/>
+    <!-- resultSet을 포함한 제외한 모든 jdbc 호출 정보를 로그로 남긴다. (많은 양의 로그가 생성되므로 특별히 jdbc문제를 추적해야할 필요가 있는 경우를 제외하고는 권장하지않음) -->
+    <logger name="jdbc.audit" 			level="OFF"/>
+    <!-- resultSet을 포함한 모든 jdbc호출 정보를 로그로 남긴다. -->
+    <logger name="jdbc.resultset" 		level="OFF"/>
+    <!-- connection open/close 이벤트 로그 -->
+    <logger name="jdbc.connection" 		level="OFF"/>
+    <!-- ※ 개인정보 보안 처리 시 springProfile 태그를 사용하여 prod/dev 개별 설정 필요 -->
+
+    <logger name="log4jdbc.log4j2" 		level="WARN"/>
+
+	<!-- TransactionManager log 필요 시 level: TRACE -->
+	<logger name="org.springframework.orm.jpa.JpaTransactionManager" level="OFF"/>
+    <logger name="org.springframework.transaction" level="OFF"/>
+
+  	<!-- Hibernate SQL 쿼리 로깅 -->
+    <logger name="org.hibernate.SQL" level="DEBUG"/>
+	<!-- jpa parameter binding log 필요 시 level: TRACE -->
+	<logger name="org.hibernate.orm.jdbc.bind" level="TRACE"/>
+
+	<logger name="io.netty" level="INFO"/>
+
+    <!-- 로그 전역 설정 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-INFO"/>
+        <appender-ref ref="FILE-WARN"/>
+    </root>
+
+</configuration>
