@@ -137,18 +137,19 @@ public class FileService {
 
     try {
 
-      Optional<FileDtl> fileDtl =
-          Optional.ofNullable(fileDtlRespository.findById(fileDtlSeq)).orElseGet(null);
+      Optional<FileDtl> fileDtl = fileDtlRespository.findById(fileDtlSeq);
 
-      FileDTO info = FileDTO.of(fileDtl.get());
+      if (fileDtl.isPresent()) {
+        FileDTO info = FileDTO.of(fileDtl.get());
 
-
-      if (info != null) {
-        return fileUtil
-            .downloadFile(info.getFileStrePath(), info.getStreFileNm(), info.getOrignlFileNm());
+        if (info != null) {
+          return fileUtil
+              .downloadFile(info.getFileStrePath(), info.getStreFileNm(), info.getOrignlFileNm());
+        }
       }
 
     } catch (Exception e) {
+      LOGGER.error("Error downloading file with fileDtlSeq: " + fileDtlSeq, e);
       return ResponseEntity.notFound().build();
     }
 

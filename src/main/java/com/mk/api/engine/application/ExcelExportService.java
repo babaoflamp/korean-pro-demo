@@ -71,22 +71,25 @@ public class ExcelExportService {
     String originalFileName = "pronunciation_result_" + currentDateTime + ".xlsx";
     String storedFileName = currentDateTime + ".xlsx";
 
-    // 디렉토리 경로 생성
-    String dirPath = UPLOAD_PATH + java.io.File.separator + DIR_NM + java.io.File.separator + formattedDate;
-    Path directory = Paths.get(dirPath);
+    // 디렉토리 경로 생성 (절대 경로)
+    String fullDirPath = UPLOAD_PATH + java.io.File.separator + DIR_NM + java.io.File.separator + formattedDate;
+    Path directory = Paths.get(fullDirPath);
 
     // 디렉토리 생성
     if (!Files.exists(directory)) {
       Files.createDirectories(directory);
     }
 
-    // 파일 저장 경로
-    String filePath = dirPath + java.io.File.separator + storedFileName;
+    // 파일 저장 경로 (절대 경로)
+    String fullFilePath = fullDirPath + java.io.File.separator + storedFileName;
 
     // 파일 쓰기
-    try (FileOutputStream fos = new FileOutputStream(filePath)) {
+    try (FileOutputStream fos = new FileOutputStream(fullFilePath)) {
       fos.write(excelBytes);
     }
+
+    // 상대 경로 (DB 저장용)
+    String relativePath = DIR_NM + java.io.File.separator + formattedDate + java.io.File.separator;
 
     // File 엔티티 생성
     File fileEntity = File.builder()
@@ -99,7 +102,7 @@ public class ExcelExportService {
     FileDtl fileDtlEntity = FileDtl.builder()
         .file(fileEntity)
         .fileSn(1)
-        .fileStrePath(dirPath)
+        .fileStrePath(relativePath)
         .streFileNm(storedFileName)
         .orignlFileNm(originalFileName)
         .fileExtsn("xlsx")
