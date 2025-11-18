@@ -468,6 +468,10 @@
         margin: 0 auto;
       }
 
+      .all-results-popup .popup {
+        max-width: 800px;
+      }
+
       .learning-box {
         display: flex;
         gap: 20px;
@@ -1370,6 +1374,86 @@
       </div>
     </div>
 
+    <!-- 전체 결과 보기 팝업 -->
+    <div class="popup-wrap all-results-popup" style="z-index: 9999">
+      <div class="popup">
+        <div class="pop-tit">
+          <p>전체 평가 결과</p>
+          <i class="close-btn"> <span class="hidden">닫기</span> </i>
+        </div>
+        <div class="pop-cont" style="max-height: 500px; overflow-y: auto">
+          <div style="margin-bottom: 20px">
+            <p style="font-size: 17px">
+              <strong>사용자명:</strong> <span id="allResultUserName"></span>
+            </p>
+          </div>
+          <table
+            id="allResultsTable"
+            style="width: 100%; border-collapse: collapse; font-size: 17px"
+          >
+            <thead>
+              <tr
+                style="
+                  background-color: #f5f5f5;
+                  border-bottom: 2px solid #ff7a00;
+                "
+              >
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border-right: 1px solid #ddd;
+                    font-size: 17px;
+                    font-weight: 600;
+                  "
+                >
+                  번호
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border-right: 1px solid #ddd;
+                    font-size: 17px;
+                    font-weight: 600;
+                  "
+                >
+                  문장
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: center;
+                    border-right: 1px solid #ddd;
+                    font-size: 17px;
+                    font-weight: 600;
+                  "
+                >
+                  문장 점수
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: center;
+                    font-size: 17px;
+                    font-weight: 600;
+                  "
+                >
+                  단어 점수
+                </th>
+              </tr>
+            </thead>
+            <tbody id="allResultsBody">
+              <!-- 동적으로 생성됨 -->
+            </tbody>
+          </table>
+          <div class="content-btn btn-wrap" style="margin-top: 20px">
+            <a href="#" class="btn btn-primary close-btn" title="">닫기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 녹음 재진행 팝업 -->
     <div class="popup-wrap recording-popup">
       <div class="popup">
@@ -1460,9 +1544,17 @@
               >
               <a
                 href="javascript:void(0)"
+                id="viewAllResults"
+                class="btn btn-secondary"
+                title=""
+                >전체 결과 보기</a
+              >
+              <a
+                href="javascript:void(0)"
                 id="exportExcel"
                 class="btn btn-secondary"
                 title=""
+                style="display: none"
                 >Excel 다운로드</a
               >
             </div>
