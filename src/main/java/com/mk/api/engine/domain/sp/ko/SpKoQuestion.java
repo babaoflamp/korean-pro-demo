@@ -37,4 +37,17 @@ public class SpKoQuestion {
     this.fst = fst;
   }
 
+  /**
+   * Update syllable letters, syllable phonemes and model fields.
+   *
+   * @param syllLtrs 글자단위 구분자('_')
+   * @param syllPhns 글자단위 발음열
+   * @param fst      생성된 모델 식별자
+   */
+  public void updatePhonemeAndModel(String syllLtrs, String syllPhns, String fst) {
+    this.syllLtrs = syllLtrs;
+    this.syllPhns = syllPhns;
+    this.fst = fst;
+  }
+
 }

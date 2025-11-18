@@ -260,4 +260,72 @@ public class SpDemoService {
         .replaceAll(" +", " "); // 연속된 공백을 하나의 공백으로 축소
   }
 
+  /**
+   * 문장(Question)의 발음기호 및 모델(fst)을 외부 엔진에 재요청하여 DB에 갱신한다.
+   *
+   * @param koId 문제 ID
+   * @return 갱신된 문제 정보
+   */
+  public ApiResponse<SpKoQuestionDTO> refreshQuestionModel(Long koId) {
+    try {
+      if (koId == null) {
+        return ApiResponse.of(HttpStatus.BAD_REQUEST, null);
+      }
+      Optional<SpKoQuestion> optional = spKoQuestionRepository.findById(koId);
+      if (optional.isEmpty()) {
+        return ApiResponse.of(HttpStatus.NOT_FOUND, null);
+      }
+
+      SpKoQuestion question = optional.get();
+
+      // 1) GTP 호출로 syll_ltrs, syll_phns 갱신 데이터 획득
+      Map<String, Object> header = new HashMap<>();
+      header.put("Content-Type", "application/json");
+
+      Map<String, Object> body = new HashMap<>();
+      body.put("id", String.valueOf(question.getKoId()));
+      body.put("text", normalizeSpaces(question.getSentence()));
+
+      String gtpResult = HttpUtil.executeRequest("POST", baseUrl + GTP, header, body);
+      SpKoModelDTO gtpDTO = mapper.readValue(gtpResult, SpKoModelDTO.class);
+
+      // 2) MODEL 호출로 fst 생성
+      body.put("syll ltrs", gtpDTO.getSyllLtrs());
+      body.put("syll phns", gtpDTO.getSyllPhns());
+      String modelResult = HttpUtil.executeRequest("POST", baseUrl + MODEL, header, body);
+      SpKoModelDTO modelDTO = mapper.readValue(modelResult, SpKoModelDTO.class);
+
+      // 3) 엔티티 갱신 및 저장
+      question.updatePhonemeAndModel(gtpDTO.getSyllLtrs(), gtpDTO.getSyllPhns(), modelDTO.getFst());
+      spKoQuestionRepository.save(question);
+
+      return ApiResponse.of(HttpStatus.OK, SpKoQuestionDTO.of(question));
+    } catch (Exception e) {
+      LOGGER.error(e.getMessage());
+      return ApiResponse.of(HttpStatus.INTERNAL_SERVER_ERROR, null);
+    }
+  }
+
+  /**
+   * 모든 문장(Question)에 대해 발음기호/모델을 재생성하여 DB에 반영
+   *
+   * @return 갱신 성공 건수
+   */
+  public ApiResponse<Integer> refreshAllQuestionModels() {
+    try {
+      List<SpKoQuestion> all = spKoQuestionRepository.findAll();
+      int success = 0;
+      for (SpKoQuestion q : all) {
+        ApiResponse<SpKoQuestionDTO> res = refreshQuestionModel(q.getKoId());
+        if (res.getStatus() >= 200 && res.getStatus() < 300) {
+          success++;
+        }
+      }
+      return ApiResponse.of(HttpStatus.OK, success);
+    } catch (Exception e) {
+      LOGGER.error(e.getMessage());
+      return ApiResponse.of(HttpStatus.INTERNAL_SERVER_ERROR, 0);
+    }
+  }
+
 }

@@ -1,17 +1,30 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/claude-code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
 **Korean-Pro-Demo** is a Spring Boot 3.4.1 application for Korean pronunciation evaluation and AI-based language learning. The application integrates with external speech processing engines (SpeechPro) to provide pronunciation assessment, text-to-speech, and language learning features.
 
+**Main Application Class:** `com.mk.KoreanProApplication` (location: `src/main/java/com/mk/KoreanProApplication.java`)
+
 **Technology Stack:**
+
+**Backend:**
 - Java 17
 - Spring Boot 3.4.1 (Data JPA, Web, Thymeleaf, WebFlux)
-- PostgreSQL with QueryDSL
+- PostgreSQL with QueryDSL 5.0.0
 - Lombok
-- Apache POI for file processing
+- Apache POI 5.2.1 for Excel/file processing
+- Log4jdbc for SQL logging
+
+**Frontend:**
+- Thymeleaf template engine (server-side rendering)
+- jQuery for DOM manipulation and AJAX
+- RecordRTC.js for audio recording
+- AOS.js for scroll animations
+- Modern CSS3 with glassmorphism design patterns
+- Responsive design targeting both desktop and mobile
 
 ## Building and Running
 
@@ -36,12 +49,17 @@ This file provides guidance to Claude Code (claude.ai/claude-code) when working 
 
 ### Application Profiles
 
-Three profiles are configured in `bin/main/application.yml`:
-- **dev** (default): Local development with PostgreSQL at 192.168.123.181:5432
-- **prod**: Production server at 112.220.79.218:18154
-- **demo**: Demo environment at 112.220.79.218:18154, runs on port 8081
+Three profiles are configured in `src/main/resources/application.yml`:
+- **dev** (default): Local development with PostgreSQL at 192.168.123.181:5432, port 8080
+- **prod**: Production server at 112.220.79.218:18154, port 8080
+- **demo**: Demo environment at 112.220.79.218:18154, port 8081
 
 To switch profiles, modify `spring.profiles.active` in application.yml or use command line args.
+
+**File Storage Paths by Profile:**
+- dev: `C:\data\mzcore\`
+- prod: `D:\data\mzcore\`
+- demo: `C:/data/mzcore/`
 
 ### Running the Application
 
@@ -74,8 +92,11 @@ com.mk
 ├── common/                 # Shared utilities
 │   ├── ApiResponse        # Standard REST response wrapper
 │   ├── HttpUtil           # HTTP client for external APIs
+│   ├── WebClientUtil      # WebFlux-based reactive HTTP client
 │   ├── FileUtil           # File operations
-│   └── Base64ToFileConverter
+│   ├── Base64ToFileConverter
+│   ├── ClientInfoUtil     # Client IP and request info extraction
+│   └── MapConverter       # Map/Object conversion utilities
 ├── config/                 # Spring configuration
 │   ├── exception/         # Global exception handlers
 │   ├── jpa/               # QueryDSL configuration
@@ -170,12 +191,17 @@ public class SpKoQuestionRepositoryCustomImpl implements SpKoQuestionRepositoryC
 
 ### 4. File Upload Handling
 
-Files are saved to profile-specific directories:
+Files are saved to profile-specific directories (configured in application.yml):
 - **dev**: `C:\data\mzcore\`
 - **prod**: `D:\data\mzcore\`
 - **demo**: `C:/data/mzcore/`
 
-Multipart config: max file 5MB, max request 10MB
+**Multipart Configuration:**
+- Max file size: 5MB
+- Max request size: 10MB
+- Enabled by default in all profiles
+
+Use `FileUtil` (src/main/java/com/mk/common/FileUtil.java) for file operations.
 
 ### 5. Internationalization (i18n)
 
@@ -183,6 +209,35 @@ Message properties in `src/main/resources/message/`:
 - `messages.properties` (default)
 - `messages_ko_kr.properties` (Korean)
 - `messages_en_us.properties` (English)
+
+### 6. Frontend Architecture
+
+**Template Structure** (`src/main/resources/templates/`):
+- `layout/` - Main/sub layouts, headers, footers
+- `fragment/` - Reusable components (chatbot, etc.)
+- `sp/` - Speech evaluation/processing pages (sp-ko-demo.html, sp-ko.html, sp-en.html)
+- `file/` - File upload interfaces
+- `error/` - Error pages
+- `index.html` - Main landing page
+
+**Static Resources** (`src/main/resources/static/`):
+- `css/` - reset.css (fonts/initialization), style.css (main styles)
+- `js/` - jQuery, AOS, RecordRTC, sp-ko-demo.js (pronunciation evaluation logic)
+- `img/` - Logos, icons, images
+- `pub/` - Publishing samples (camp application, news, tests)
+
+**Key UI Pages:**
+- `/` - Main landing page
+- `/sp/ko-demo` - Korean pronunciation evaluation (primary feature)
+- `/sp/ko` - Korean speech processing
+- `/sp/en` - English speech processing
+- `/file` - File upload interface
+
+**Web Controllers** (in `com.mk.web` package):
+- `HomeController` - Main page
+- `SpKoController` - Korean speech processing UI
+- `SpEnController` - English speech processing UI
+- `CustomErrorController` - Error page handling
 
 ## Testing
 
@@ -195,9 +250,12 @@ Message properties in `src/main/resources/message/`:
 
 # Run with detailed output
 ./gradlew test --info
+
+# Clean and test
+./gradlew clean test
 ```
 
-Current test file: `src/test/java/com/mk/AiEconCampApplicationTests.java`
+Test location: `src/test/java/com/mk/`
 
 ## Database
 
@@ -208,6 +266,28 @@ Current test file: `src/test/java/com/mk/AiEconCampApplicationTests.java`
 - `open-in-view: false` to prevent lazy loading issues
 
 **Connection details** are profile-specific (see application.yml).
+
+## Logging
+
+**Configuration:** `src/main/resources/logback.xml`
+
+**Log Files:**
+- Info logs: `C:/core/log/info/core-info.log`
+- Warn/Error logs: `C:/core/log/warn/core-warn.log`
+
+**Rotation Policy:**
+- Max file size: 10MB
+- Retention: 30 days
+- Daily rotation with automatic compression
+
+**Console Output:**
+- Pattern: `[HH:mm:ss.SSS] LEVEL[logger.method:line] - message`
+- Color-coded levels in development
+
+**SQL Logging:**
+- Uses log4jdbc to log SQL statements
+- Driver: `net.sf.log4jdbc.sql.jdbcapi.DriverSpy`
+- Shows formatted SQL with execution time
 
 ## Important Configuration Notes
 
@@ -253,7 +333,11 @@ The following URIs are excluded from system logging:
 
 ### Working with External APIs
 
-Use `HttpUtil.executeRequest()` (src/main/java/com/mk/common/HttpUtil.java) for external HTTP calls:
+**HTTP Client Options:**
+1. **HttpUtil** (blocking): For traditional synchronous HTTP calls
+2. **WebClientUtil** (reactive): For reactive/async HTTP calls using WebFlux
+
+**Example using HttpUtil:**
 ```java
 Map<String, Object> header = new HashMap<>();
 header.put("Content-Type", "application/json");
@@ -263,3 +347,42 @@ body.put("key", "value");
 
 String result = HttpUtil.executeRequest("POST", url, header, body);
 ```
+
+**External API Endpoints (configured in application.yml):**
+- `api.stt.host` / `api.stt.port`: Speech-to-Text service (112.220.79.222:33001)
+- `api.mirage.url`: Mirage service (http://112.220.79.222:33004)
+- `api.speechpro_kr.url`: Korean SpeechPro engine (http://112.220.79.222:33005/speechpro)
+- `api.speechpro_en.url`: English SpeechPro engine (https://112.220.79.218:13725)
+
+## Pronunciation Evaluation Workflow
+
+The Korean pronunciation evaluation feature follows this workflow:
+
+1. **Question Retrieval**: User selects from 20 Korean test sentences stored in `SpKoQuestion` entity
+2. **Model Generation** (if needed):
+   - Call `/gtp` endpoint to get pronunciation symbols (G2P conversion)
+   - Call `/model` endpoint to generate pronunciation model (FST)
+   - Store `syll_ltrs`, `syll_phns`, and `fst` in database
+3. **Audio Recording**: Frontend uses RecordRTC.js to capture user's pronunciation
+4. **Evaluation**:
+   - Convert audio to base64
+   - Send to `/scorejson` endpoint with question data
+   - Receive scores for sentence, words, syllables, and phonemes
+5. **Result Storage**:
+   - Save audio file to file system (`/data/mzcore/speechpro-ko/`)
+   - Save `File` and `FileDtl` entities for file tracking
+   - Save `SpKoAnswer` entity with evaluation results (JSON format)
+   - Link answer to original question via foreign key
+
+**Key Service:** `SpDemoService.createEvaluate()` (src/main/java/com/mk/api/engine/application/SpDemoService.java:145)
+
+## Project Development Notes
+
+**Current Enhancement Requirements** (from requirements.txt):
+
+1. Fix and add up to 20 Korean test sentences to the question list
+2. Export evaluation scores to text file or Excel format
+3. Add user name input (dialog box) at test start
+4. Include name, question number, sentence, sentence score, word scores, and phoneme scores in Excel export
+
+**Test Sentences**: The application uses 20 fixed Korean sentences for pronunciation evaluation, covering various grammatical structures and difficulty levels (greetings, conditional expressions, complex sentences with conjunctions, etc.)

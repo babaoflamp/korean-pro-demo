@@ -28,6 +28,7 @@ public class SpKoAnswer {
 
   @ManyToOne
   @JoinColumn(name = "koId")
+  @com.fasterxml.jackson.annotation.JsonIgnoreProperties({"syllLtrs", "syllPhns", "fst"})
   private SpKoQuestion spKoQuestion;
 
   @JdbcTypeCode(SqlTypes.JSON)
