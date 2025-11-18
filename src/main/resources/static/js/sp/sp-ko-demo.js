@@ -14,6 +14,28 @@ let loadQuestion;			// 진입 시 세팅할 문제
 let isPlaying = false;		// 현재 오디오 재생중 여부
 
 $(document).ready(function() {
+	// 사용자 이름 확인 및 팝업 표시
+	if (!sessionStorage.getItem('userName')) {
+		openModal('name-input-popup');
+	}
+
+	// 이름 확인 버튼 클릭
+	$('#confirmName').on('click', function() {
+		let name = $('#userName').val().trim();
+		if (name) {
+			sessionStorage.setItem('userName', name);
+			$('.name-input-popup').hide();
+		} else {
+			$('#alertText').text('이름을 입력해주세요.');
+			$('.name-input-popup').hide();
+			openModal('alert-popup');
+			setTimeout(function() {
+				$('.alert-popup').hide();
+				openModal('name-input-popup');
+			}, 1500);
+		}
+	});
+
 	// 문제 목록
 	fn_getQuestionList();
 
@@ -79,6 +101,11 @@ $(document).ready(function() {
 	$('#popNext').on('click', function() {
 		$('.learning-popup').hide();
 		moveToNext();
+	})
+
+	// Excel 다운로드 버튼 클릭
+	$('#exportExcel').on('click', function() {
+		fn_exportExcel();
 	})
 
 });
@@ -236,6 +263,15 @@ function fn_evaluate_callback(result) {
 	$('.loading-popup').hide();
 
 	if ( result.status == 200 ) {
+		// answerId를 sessionStorage에 저장
+		if (result.data && result.data.answerId) {
+			let answerIds = JSON.parse(sessionStorage.getItem('answerIds') || '[]');
+			if (!answerIds.includes(result.data.answerId)) {
+				answerIds.push(result.data.answerId);
+				sessionStorage.setItem('answerIds', JSON.stringify(answerIds));
+			}
+		}
+
 		openModal('checkResults-popup');
 		$('#evaluateConfirm').click(function() {
 			$('.checkResults-popup').css('display', 'none');
@@ -458,4 +494,60 @@ function fn_getDate(dateStr) {
 // &nbsp 대체
 function replaceSpace(sentence) {
 	return sentence.replaceAll(/\u00A0/g, " ");
+}
+
+// Excel 내보내기
+function fn_exportExcel() {
+	let userName = sessionStorage.getItem('userName');
+	let answerIds = JSON.parse(sessionStorage.getItem('answerIds') || '[]');
+
+	if (!userName) {
+		$('#alertText').text('사용자 이름이 설정되지 않았습니다.');
+		openModal('alert-popup');
+		return;
+	}
+
+	if (answerIds.length === 0) {
+		$('#alertText').text('내보낼 평가 결과가 없습니다. 먼저 문제를 풀어주세요.');
+		openModal('alert-popup');
+		return;
+	}
+
+	let data = {
+		userName: userName,
+		answerIds: answerIds
+	};
+
+	// Excel 다운로드 요청
+	$.ajax({
+		url: '/api/sp/demo/export/excel',
+		type: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify(data),
+		xhrFields: {
+			responseType: 'blob'
+		},
+		success: function(blob, status, xhr) {
+			// 파일명 생성 (발음평가결과_이름_타임스탬프.xlsx)
+			let timestamp = new Date().toISOString().replace(/[:.]/g, '-').substring(0, 19);
+			let filename = '발음평가결과_' + userName + '_' + timestamp + '.xlsx';
+
+			// Blob을 파일로 다운로드
+			let link = document.createElement('a');
+			let url = window.URL.createObjectURL(blob);
+			link.href = url;
+			link.download = filename;
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			window.URL.revokeObjectURL(url);
+
+			$('#alertText').text('Excel 파일이 다운로드되었습니다.');
+			openModal('alert-popup');
+		},
+		error: function(xhr, status, error) {
+			$('#alertText').text('Excel 내보내기 중 오류가 발생했습니다.');
+			openModal('alert-popup');
+		}
+	});
 }

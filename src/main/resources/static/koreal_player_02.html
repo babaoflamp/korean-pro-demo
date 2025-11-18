@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title> 한국어 발음 연습</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #f9f5ff, #e0f4ff, #fdf2ff);
+    }
+
+    .app-wrapper {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 16px 50px;
+    }
+
+    .app-title {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sentences-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 18px;
+    }
+
+    .sentence-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 16px 18px 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      border: 1px solid rgba(100,100,100,0.1);
+      transition: 0.2s;
+    }
+
+    .sentence-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    /* 전체 문장 표시 박스 */
+    .sentence-text {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1e293b;
+      line-height: 1.5;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #f3f4f6;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* 번호 배지 */
+    .sentence-number {
+      background: #4f46e5;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 3px 8px rgba(79,70,229,0.25);
+    }
+
+    .sentence-header {
+      display: flex;
+      justify-content: flex-start;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.18s;
+    }
+
+    .btn-play {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+    }
+
+    .btn-play:hover { opacity: 0.9; }
+
+    .btn-stop {
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    .btn-stop:hover { background: #cbd5e1; }
+
+    .word-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 4px;
+      padding: 6px 10px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: 0.15s;
+    }
+
+    .word-box:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .word-text {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .word-btn {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .word-btn.play {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .word-btn.stop {
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    .playing {
+      background: #dbeafe !important;
+      border-color: #60a5fa !important;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.25) !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-wrapper">
+    <div class="app-title"> 한국어 음성 플레이어</div>
+    <div id="sentences-container" class="sentences-grid"></div>
+  </div>
+
+<script>
+const sentences = [
+  "서울은 차도 많고 사람도 많아서 조금 복잡하지만 경치가 아름다운 도시입니다.",
+  "버스는 사람이 많아서 복잡하지만 회사에 빨리 갈 수 있어요.",
+  "공과금을 납부하러 은행에 갔어요.",
+  "약을 사러 약국에 갔어요.",
+  "저는 버스를 자주 타는 편이에요.",
+  "우리 아들은 키가 큰 편이에요.",
+  "친구들과 맛있는 음식을 만들어 먹으면서 재미있게 지냈어요.",
+  "저는 음악을 들으면서 청소를 해요.",
+  "몸이 아플 때 어머니 생각이 많이 나요.",
+  "힘들 때 친구가 생각나요.",
+  "불고기는 간장과 설탕 같은 양념이 들어갑니다.",
+  "김치에는 고춧가루와 마늘 같은 양념이 들어갑니다.",
+  "나는 취업 준비를 하려고 컴퓨터 자격증 과정을 신청했다.",
+  "저는 한국어 수업을 듣기 위해 교육센터에 신청했어요.",
+  "한국에 와서 성격도 활발해지고 친구들도 많아졌다.",
+  "한국에 온 후 요리가 점점 쉬워졌어요.",
+  "택배를 보낼 때는 주소를 정확히 써 주세요.",
+  "시험에 응시할 때는 이름을 정확히 적어야 해요.",
+  "어제 바닥에 떨어뜨려서 그런지 휴대폰이 잘 안돼요.",
+  "비가 와서 그런지 오늘은 길이 많이 막혀요."
+];
+
+
+const container = document.getElementById("sentences-container");
+const audio = new Audio();
+
+function stopAll() {
+  audio.pause();
+  audio.currentTime = 0;
+  document.querySelectorAll(".playing").forEach(el => el.classList.remove("playing"));
+}
+
+audio.addEventListener("ended", stopAll);
+audio.addEventListener("error", () => {
+  alert("WAV 파일이 존재하지 않습니다.\n파일명을 확인하세요.");
+  stopAll();
+});
+
+sentences.forEach((text, idx) => {
+  const id = idx + 1;
+
+  const card = document.createElement("div");
+  card.className = "sentence-card";
+
+  /** 전체 문장 + 번호 배지 */
+  const sentenceText = document.createElement("div");
+  sentenceText.className = "sentence-text";
+
+  sentenceText.innerHTML = `
+      <span class="sentence-number">${id}</span>
+      <span>${text}</span>
+  `;
+  card.appendChild(sentenceText);
+
+  /** 전체 재생 / 정지 버튼 */
+  const header = document.createElement("div");
+  header.className = "sentence-header";
+  header.innerHTML = `
+    <button class="btn btn-play" data-type="sentence-play">▶ 전체 재생</button>
+    <button class="btn btn-stop" data-type="sentence-stop">■ 정지</button>
+  `;
+  card.appendChild(header);
+
+  /** 어절별 버튼 */
+  const wordContainer = document.createElement("div");
+  const words = text.split(" ");
+
+  words.forEach((w, wi) => {
+    const wordIndex = wi + 1;
+
+    const box = document.createElement("div");
+    box.className = "word-box";
+
+    const span = document.createElement("div");
+    span.className = "word-text";
+    span.textContent = w;
+
+    const playBtn = document.createElement("button");
+    playBtn.className = "word-btn play";
+    playBtn.textContent = "▶";
+
+    const stopBtn = document.createElement("button");
+    stopBtn.className = "word-btn stop";
+    stopBtn.textContent = "■";
+
+    playBtn.addEventListener("click", () => {
+      stopAll();
+      box.classList.add("playing");
+      audio.src = `wav/${id}-${wordIndex}.wav`;
+      audio.play();
+    });
+
+    stopBtn.addEventListener("click", stopAll);
+
+    box.appendChild(span);
+    box.appendChild(playBtn);
+    box.appendChild(stopBtn);
+    wordContainer.appendChild(box);
+  });
+
+  card.appendChild(wordContainer);
+
+  /** 전체 재생 / 정지 이벤트 */
+  header.querySelector("[data-type='sentence-play']").addEventListener("click", () => {
+    stopAll();
+    card.classList.add("playing");
+    audio.src = `wav/${id}-Total.wav`;
+    audio.play();
+  });
+
+  header.querySelector("[data-type='sentence-stop']").addEventListener("click", stopAll);
+
+  container.appendChild(card);
+});
+</script>
+</body>
+</html>
